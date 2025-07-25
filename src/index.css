@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+
+
+@import 'tailwindcss';
+
+
+@font-face{
+  font-family: Lufga;
+  src: url('../src/assets/fonts/Lufga.ttf');
+}
+
+@theme{
+  
+  --font-lufga: Lufga , 'sans-serif';
+  --font-outfit: Outfit , 'sans-serif';
+  
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+
+@keyframes banner-scroll {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1000px; /* adjust based on image width */
+  }
+}
+
+.animate-banner-scroll {
+  animation: banner-scroll 10s linear infinite;
+}
+
+.card{
+clip-path: polygon(0 0, 100% 0, 100% 76%, 81% 76%, 69% 86%, 69% 100%, 0 100%);
+
+}
