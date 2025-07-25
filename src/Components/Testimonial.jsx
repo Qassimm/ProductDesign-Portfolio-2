@@ -2,6 +2,7 @@ import React from "react";
 import Background from "../assets/images/Background.jpg";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 import { Testimonials } from "./Data/Testimonial";
+import testimonials from '../assets/images/testimonial.jpg';
 
 const Testimonial = () => {
   return (
@@ -39,7 +40,7 @@ const Testimonial = () => {
                   <div className="flex justify-between items-center">
                     <div className="flex gap-5 relative z-10">
                       <img
-                        src={item.image}
+                        src={testimonials}
                         alt={item.name}
                         className="h-[55px] w-[55px] 2xl:h-[105px] 2xl:w-[105px] object-cover rounded-full"
                       />

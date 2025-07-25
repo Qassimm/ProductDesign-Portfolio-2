@@ -1,4 +1,3 @@
-// experienceData.js
 export const ExperienceWork = [
   {
     company: "Cognizant, Mumbai",

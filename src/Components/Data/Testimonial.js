@@ -1,4 +1,4 @@
-import testimonial from '../../assets/images/testimonial.jpg';
+
 
 export  const Testimonials = [
   {
@@ -7,7 +7,6 @@ export  const Testimonials = [
     rating: 5,
     feedback:
       "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
-    image: testimonial, // imported image
   },
   {
     name: "Jayesh Patil",
@@ -15,7 +14,6 @@ export  const Testimonials = [
     rating: 5,
     feedback:
       "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
-    image: testimonial,
   },
   {
     name: "Ravi Verma",
@@ -23,6 +21,5 @@ export  const Testimonials = [
     rating: 5,
     feedback:
       "consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.Sed lobortis orci elementum egestas lobortis.",
-    image: testimonial,
   },
 ];
