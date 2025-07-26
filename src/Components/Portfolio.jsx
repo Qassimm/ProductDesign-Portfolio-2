@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { MyProjects } from "./Data/MyProject";
 import { LuArrowUpRight } from "react-icons/lu";
-import myProject from '../assets/images/MyProject.png';
+import Project from '../assets/images/project.png';
 
 const  Portfolio = () => {
   return (
@@ -24,7 +24,7 @@ const  Portfolio = () => {
           key={index}
           className="w-[610px] 2xl:w-[710px] h-[350px] 2xl:h-[450px] px-3 rounded-2xl overflow-hidden bg-cover bg-center relative group"
           style={{
-            backgroundImage: `radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.5), transparent 70%), url(${myProject})`,
+            backgroundImage: `radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.5), transparent 70%), url(${Project})`,
           }}
         >
           
