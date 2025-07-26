@@ -34,11 +34,11 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-4 mt-8 text-xl 2xl:text-3xl cursor-pointer ">
-              <FaFacebook />
-              <FaYoutube />
-              <FaWhatsapp />
-              <FaInstagram />
-              <FaTwitter />
+              <FaFacebook className="hover:text-[#FD853A]" />
+              <FaYoutube className="hover:text-[#FD853A]"/>
+              <FaWhatsapp className="hover:text-[#FD853A]"/>
+              <FaInstagram className="hover:text-[#FD853A]"/>
+              <FaTwitter className="hover:text-[#FD853A]"/>
             </div>
           </div>
         </div>

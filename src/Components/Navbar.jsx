@@ -33,7 +33,7 @@ const Navbar = () => {
         showNavbar ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className='bg-[#171717] w-auto h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white'>
+      <div className='bg-[#171717] w-auto 2xl:h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white'>
 
         {/* Left Links */}
         {['Home', 'About', 'Service'].map((link, i) => (
@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden bg-[#171717] text-white  absolute top-18 left-0 w-1/2 px-10 py-6 flex flex-col gap-4 transition-all duration-300 ease-in-out rounded-r-xl ${
+          className={`lg:hidden bg-[#171717] text-white  absolute top-20 left-0 w-1/2 px-10 py-6 flex flex-col gap-4 transition-all duration-300 ease-in-out rounded-r-xl ${
             isOpen
               ? 'translate-x-0 opacity-100'
               : '-translate-x-5 opacity-0 pointer-events-none'

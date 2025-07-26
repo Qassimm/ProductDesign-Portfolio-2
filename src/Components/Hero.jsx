@@ -51,7 +51,7 @@ const Hero = () => {
       
 
       <div className="grid place-items-center relative mt-85 lg:mt-0">
-        <img src={HeroPic} alt="HeroPic" className=" h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10" />
+        <img src={HeroPic} alt="HeroPic" className=" h-[420px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10" />
         <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#FEB273] rounded-t-full absolute -top-51 sm:-top-37.5" />
      
         <div className="w-[270px] 2xl:w-[360px] rounded-full border-white border-1 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50 text-white translate-y-15">
