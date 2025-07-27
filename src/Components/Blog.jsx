@@ -64,15 +64,15 @@ const Blog = () => {
 
   return (
     <div className="mb-12">
-      <div className="w-full h-[20vh] bg-[#FB6514] rounded-tl-[60px] rounded-br-[60px] flex items-center mb-1 sm:mb-5">
-        <div className="overflow-hidden w-full h-[12vh] bg-white -rotate-2">
-          <div className="animate-slide flex w-max sm:mt-0.5 md:mt-1.5 lg:mt-2 justify-center items-center sm:text-lg md:text-3xl lg:text-4xl text-black font-semibold gap-10 whitespace-nowrap">
+      <div className="w-full  h-[20vh] bg-[#FB6514] rounded-tl-[60px] rounded-br-[60px] flex items-center mb-1 sm:mb-5">
+        <div className="overflow-hidden w-full  h-[12vh] bg-white -rotate-2">
+          <div className="animate-slide flex w-max mt-3.5 sm:mt-0.5 md:mt-2 lg:mt-2 justify-center items-center text-lg sm:text-lg md:text-3xl lg:text-4xl text-black font-semibold gap-10 whitespace-nowrap">
             {["App Design", "Dashboard", "Wireframe", "User Reference"]
               .map((text, index) => (
                 <React.Fragment key={index}>
                   <div
                     id="stars"
-                    className="text-[#fb6514] text-lg md:text-3xl lg:text-6xl"
+                    className="text-[#fb6514] text-xl sm:text-lg md:text-3xl lg:text-6xl"
                   >
                     ✦
                   </div>
@@ -86,7 +86,7 @@ const Blog = () => {
                     <React.Fragment key={index + 4}>
                       <div
                         id="stars"
-                        className="text-[#fb6514] text-lg md:text-3xl lg:text-6xl"
+                        className="text-[#fb6514] text-xl sm:text-lg md:text-3xl lg:text-6xl"
                       >
                         ✦
                       </div>
