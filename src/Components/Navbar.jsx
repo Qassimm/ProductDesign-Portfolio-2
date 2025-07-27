@@ -188,7 +188,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`md:hidden bg-[#171717] text-white absolute top-20 right-0 w-1/2 px-10 py-6 flex flex-col gap-4 transition-all duration-300 ease-in-out rounded-l-xl ${
+          className={`md:hidden bg-[#171717] text-white absolute top-19 w-75 h-[100vh] right-0  px-10 py-6 flex flex-col gap-8 transition-all duration-300 ease-in-out rounded-l-xl ${
             isOpen
               ? "translate-x-0 opacity-100"
               : "translate-x-5 opacity-0 pointer-events-none"
