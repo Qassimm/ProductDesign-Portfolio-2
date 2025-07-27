@@ -1,94 +1,217 @@
-import React, { useState, useEffect } from 'react'
-import Logo from '../assets/images/logo.png'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React, { useState, useEffect, useRef } from "react";
+import Logo from "../assets/images/logo.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { GiApc } from "react-icons/gi";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [showNavbar, setShowNavbar] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeLink, setActiveLink] = useState("#home");
 
-  // Scroll logic
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const navLinks1 = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+  ];
+
+  const navLinks2 = [
+    { label: "Resume", href: "#resume" },
+    { label: "Project", href: "#project" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setShowNavbar(false) // scroll down → hide
+        setShowNavbar(false);
       } else {
-        setShowNavbar(true) // scroll up → show
+        setShowNavbar(true);
       }
-      setLastScrollY(window.scrollY)
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
-    window.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+  const handleClick = (href) => {
+    setActiveLink(href);
+    setIsOpen(false);
+  };
+
+  const tl = gsap.timeline();
+
+  useGSAP(() => {
+    tl.fromTo(
+      ".logo",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+      }
+    );
+
+    tl.fromTo(
+      ".left-nav",
+      {
+        x: -50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.9,
+        ease: "power3.out",
+      },
+      "-=0.2"
+    );
+
+    // Right Nav from right
+    tl.fromTo(
+      ".right-nav",
+      {
+        x: 50,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.9,
+        ease: "power3.out",
+      },
+      "<" // same time
+    );
+  }, []);
 
   return (
-
-         // orange colore #FD853A
-        // black color #171717
-
     <div
+      id="container"
       className={`md:p-2 lg:p-5 fixed z-[100] w-screen transition-transform duration-300 ${
-        showNavbar ? 'translate-y-0' : '-translate-y-full'
+        showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className='bg-[#171717] w-auto 2xl:h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white'>
-
+      <div className="bg-[#171717] w-auto 2xl:h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white">
         {/* Left Links */}
-        {['Home', 'About', 'Service'].map((link, i) => (
+        {navLinks1.map((link, i) => (
           <a
             key={i}
-            className='hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] hover:bg-[#4b4b4b] rounded-full duration-300 lg:text-lg 2xl:text-3xl'
+            href={link.href}
+            onClick={() => handleClick(link.href)}
+            className={`left-nav hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] rounded-full duration-300 lg:text-lg 2xl:text-3xl ${
+              activeLink === link.href
+                ? "bg-[#FD853A] text-white"
+                : "hover:bg-[#4b4b4b]"
+            }`}
           >
-            {link}
+            {link.label}
           </a>
         ))}
 
         {/* Logo */}
-        <div className='flex justify-center items-center text-2xl 2xl:text-4xl font-bold md:mx-8'>
-          <img src={Logo} alt='Logo' className='h-auto w-[75px] 2xl:w-[120px]' />
+        <a className="logo flex justify-center items-center text-2xl 2xl:text-4xl font-bold md:mx-8">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="h-auto w-[75px] 2xl:w-[120px]"
+          />
           <p>JCREA</p>
-        </div>
+        </a>
 
         {/* Right Links */}
-        {['Resume', 'Project', 'Contact'].map((link, i) => (
+        {navLinks2.map((link, i) => (
           <a
             key={i}
-            className='hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] hover:bg-[#4b4b4b] rounded-full duration-300 lg:text-lg 2xl:text-3xl'
+            href={link.href}
+            onClick={() => handleClick(link.href)}
+            className={`right-nav hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] rounded-full duration-300 lg:text-lg 2xl:text-3xl ${
+              activeLink === link.href
+                ? "bg-[#FD853A] text-white"
+                : "hover:bg-[#4b4b4b]"
+            }`}
           >
-            {link}
+            {link.label}
           </a>
         ))}
 
-        {/* Hamburger Icon */}
-        <button
+        {/* Hamburger Icon (mobile only) */}
+        <div
+          ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className='md:hidden p-3 text-xl text-white cursor-pointer rounded-full duration-300 hover:text-gray-400'
+          className="flex flex-col justify-between w-[28px] h-[22px] cursor-pointer z-50 md:hidden"
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+          <span
+            className={`h-[3px] w-full bg-white rounded transition-transform duration-300 ${
+              isOpen ? "rotate-45 translate-y-[9.5px]" : ""
+            }`}
+          />
+          <span
+            className={`h-[3px] w-full bg-white rounded transition-opacity duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-[3px] w-full bg-white rounded transition-transform duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-[9.5px]" : ""
+            }`}
+          />
+        </div>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden bg-[#171717] text-white  absolute top-20 left-0 w-1/2 px-10 py-6 flex flex-col gap-4 transition-all duration-300 ease-in-out rounded-r-xl ${
+          ref={menuRef}
+          className={`md:hidden bg-[#171717] text-white absolute top-20 right-0 w-1/2 px-10 py-6 flex flex-col gap-4 transition-all duration-300 ease-in-out rounded-l-xl ${
             isOpen
-              ? 'translate-x-0 opacity-100'
-              : '-translate-x-5 opacity-0 pointer-events-none'
+              ? "translate-x-0 opacity-100"
+              : "translate-x-5 opacity-0 pointer-events-none"
           }`}
         >
-          {['Home', 'About', 'Service', 'Resume', 'Project', 'Contact'].map(
-            (link, i) => (
-              <a key={i} className='text-lg pb-1 border-b-1 cursor-pointer hover:text-gray-300'>
-                {link}
-              </a>
-            )
-          )}
+          {[...navLinks1, ...navLinks2].map((link, i) => (
+            <a
+              key={i}
+              href={link.href}
+              onClick={() => handleClick(link.href)}
+              className={`text-lg pb-1 border-b cursor-pointer rounded-md px-2 py-1 transition-colors duration-200 ${
+                activeLink === link.href
+                  ? "bg-[#FD853A] text-black"
+                  : "hover:text-gray-300"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;

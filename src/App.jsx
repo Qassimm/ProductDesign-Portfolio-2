@@ -33,7 +33,7 @@ const App = () => {
   }, []);  
 
   return (
-    <div className='font-lufga text-[#344054] overflow-x-hidden'>
+    <div className='font-lufga text-[#344054] overflow-x-hidden '>
 
       <Navbar/>
       <Hero/>

@@ -9,4 +9,5 @@ export const MyProjects = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum maiores quam sunt vitae voluptatibus voluptate totam aliquam omnis numquam atque dolor, magnam reprehenderit doloribus aut dolorum debitis ipsa ad tenetur!",
   },
+  
 ];

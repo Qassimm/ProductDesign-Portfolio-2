@@ -17,6 +17,54 @@
   
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* menubar animation */
+
+.icon-holder {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Animation on open */
+.icon-holder.menu-open .bar-1 {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 28px;
+}
+
+.icon-holder.menu-open .bar-2 {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.icon-holder.menu-open .bar-3 {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 28px;
+}
+
+
+
+
+/* banner slide */
+
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -31,20 +79,34 @@
 }
 
 
-@keyframes banner-scroll {
-  0% {
-    background-position: 0;
-  }
-  100% {
-    background-position: -1000px; /* adjust based on image width */
-  }
-}
-
-.animate-banner-scroll {
-  animation: banner-scroll 10s linear infinite;
-}
-
 .card{
 clip-path: polygon(0 0, 100% 0, 100% 76%, 81% 76%, 69% 86%, 69% 100%, 0 100%);
 
+}
+
+
+
+
+
+/*slides testimonial  cards*/
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 55s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

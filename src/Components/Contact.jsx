@@ -1,6 +1,9 @@
 import React from "react";
 import { FaAward, FaMailBulk } from "react-icons/fa";
 import { FaShield, FaStar } from "react-icons/fa6";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
 
 const Contact = () => {
   const stats = [
@@ -18,14 +21,53 @@ const Contact = () => {
     },
   ];
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    const animateContactHeading = () => {
+      gsap.from(".contact-heading", {
+        opacity: 0,
+        y: -40,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".contact-heading",
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+    };
+
+    const animateFormSection = () => {
+      gsap.from(".form-sec", {
+        opacity: 0,
+        y: 40,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".form-sec",
+          start: "top 60%",
+          toggleActions: "play none none none",
+        },
+      });
+    };
+
+    //  Run animations
+    animateContactHeading();
+    animateFormSection();
+  }, []);
+
   return (
-    <div className="h-auto w-full flex flex-col justify-center items-center gap-5 md:gap-10 lg:p-10 mb-22">
-      <h1 className=" w-auto lg:w-[800px] 2xl:w-[900px] text-4xl md:text-6xl 2xl:text-7xl text-center font-semibold">
+    <div
+      id="contact"
+      className="h-auto w-full flex flex-col justify-center items-center gap-5 md:gap-10 lg:p-10 mb-22"
+    >
+      <h1 className="contact-heading w-auto lg:w-[800px] 2xl:w-[900px] text-4xl md:text-6xl 2xl:text-7xl text-center font-semibold">
         Have an Awsome Project Idea?
         <span className="text-[#FD853A]"> Let's Discuss</span>
       </h1>
 
-      <div className=" mx-2 sm:w-[400px] md:w-[700px] lg:w-[830px] h-[70px] md:h-[90px] border-1  rounded-[50px]    px-3 justify-between items-center">
+      <div className=" form-sec mx-2 sm:w-[400px] md:w-[700px] lg:w-[830px] h-[70px] md:h-[90px] border-1  rounded-[50px]    px-3 justify-between items-center">
         <form action="submit" className="flex  items-center  md:gap-6">
           <FaMailBulk className="text-4xl md:text-6xl text-[#FD853A] cursor-pointer bg-[#FFEAD5] p-1 md:p-3 rounded-full" />
           <input
