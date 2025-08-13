@@ -76,7 +76,7 @@ const Blog = () => {
                   >
                     ✦
                   </div>
-                  <p className="">{text}</p>
+                  <p className="text">{text}</p>
                 </React.Fragment>
               ))
               .flat()
