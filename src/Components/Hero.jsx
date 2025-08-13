@@ -117,7 +117,7 @@ const Hero = () => {
           alt="HeroPic"
           className=" h-[420px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
         />
-        <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#FEB273] rounded-t-full absolute -top-51 sm:-top-37.5" />
+        <div className="w-80 sm:w-140 2xl:w-[30vw] h-90 sm:h-70 2xl:h-[40vh] bg-[#FEB273] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
         <div className="w-[300px] 2xl:w-[360px] rounded-full border-white border-1 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50 text-white translate-y-5">
           {buttons.map((btn, i) => (
