@@ -124,7 +124,7 @@ const MyWorkExperience = () => {
       <img
         src={listline}
         alt=""
-        className="hidden sm:block h-260 lg:h-190 2xl:h-130 object-cover absolute top-16 sm:top-40 lg:top-36 z-[-1]"
+        className="hidden sm:block h-260 lg:h-[120vh] object-cover absolute top-16 sm:top-40 lg:top-36 z-[-1]"
       />
     </div>
   );

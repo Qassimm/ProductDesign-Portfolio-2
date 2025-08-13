@@ -90,23 +90,30 @@ clip-path: polygon(0 0, 100% 0, 100% 76%, 81% 76%, 69% 86%, 69% 100%, 0 100%);
 
 /*slides testimonial  cards*/
 
-.scroller[data-animated="true"] {
+/* Wrap container */
+.testimonial-wrapper {
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  position: relative;
+  width: 100%;
+  
 }
 
-.scroller[data-animated="true"] .scroller__inner {
+/* Scroll track container */
+.testimonial-track {
+  display: flex;
   width: max-content;
-  flex-wrap: nowrap;
-  animation: scroll 55s linear infinite;
+  animation: scroll-right 40s linear infinite;
+  
 }
 
-@keyframes scroll {
+/* Keyframes for infinite scroll */
+@keyframes scroll-right {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
 }
+
+

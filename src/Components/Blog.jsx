@@ -65,18 +65,18 @@ const Blog = () => {
   return (
     <div className="mb-12">
       <div className="w-full  h-[20vh] bg-[#FB6514] rounded-tl-[60px] rounded-br-[60px] flex items-center mb-1 sm:mb-5">
-        <div className="overflow-hidden w-full  h-[12vh] bg-white -rotate-2">
-          <div className="animate-slide flex w-max mt-2 justify-center items-center text-4xl text-black font-semibold gap-10 whitespace-nowrap">
+        <div className="overflow-hidden w-full  h-[12vh] bg-white -rotate-2 flex">
+          <div className="animate-slide flex w-max  justify-center items-center text-3xl md:text-4xl text-black font-semibold gap-5 md:gap-10 whitespace-nowrap">
             {["App Design", "Dashboard", "Wireframe", "User Reference"]
               .map((text, index) => (
                 <React.Fragment key={index}>
                   <div
                     id="stars"
-                    className="text-[#fb6514] text-2xl md:text-3xl lg:text-6xl"
+                    className="text-[#fb6514] text-3xl md:text-3xl lg:text-6xl"
                   >
                     ✦
                   </div>
-                  <p className="text ">{text}</p>
+                  <p className="">{text}</p>
                 </React.Fragment>
               ))
               .flat()

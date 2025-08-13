@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef } from "react";
 import Background from "../assets/images/Background.jpg";
 import Leaf from "../assets/images/Leaf.png";
 import gsap from "gsap";
@@ -122,13 +122,15 @@ const MyServices = () => {
       className="lg:h-[100vh] w-auto bg-cover rounded-[50px] relative text-white overflow-hidden mt-12 md:mt-6 lg:mt-0 mb-12 z-10"
       style={{ backgroundImage: `url(${Background})` }}
     >
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] rounded-[50px] z-5" />
-      <div className="relative z-20 p-15">
-        <div className="z-90 flex justify-center md:justify-between text-center md:text-start flex-col md:flex-row items-center text-white">
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] rounded-[50px] z-5 " />
+
+      {/* Content center fix */}
+      <div className="relative z-20 p-15 h-full flex flex-col justify-center">
+        <div className="z-90 flex justify-center items-center md:justify-between md:items-center text-center md:text-start flex-col md:flex-row h-full text-white">
           <h1 className="heading text-4xl md:text-6xl 2xl:text-8xl font-semibold">
             My <span className="text-[#FD853A]">Services</span>
           </h1>
-          <p className="para md:w-[465px] 2xl:text-xl">
+          <p className="para md:w-[465px] 2xl:text-xl mt-4 md:mt-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
             nunc, posuere in justo vulputate, bibendum sodales{" "}
           </p>

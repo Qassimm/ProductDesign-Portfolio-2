@@ -4,6 +4,7 @@ import { LuArrowUpRight } from "react-icons/lu";
 import HeroPic from "../assets/images/HeroPic.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { SplitText } from "gsap/all";
 
 const Hero = () => {
   const buttons = [
@@ -12,6 +13,8 @@ const Hero = () => {
   ];
 
   useGSAP(() => {
+
+    const heroSplit = SplitText.create('#home h3', {type:'words'})
     const tl = gsap.timeline({
       defaults: { delay: 0.25, duration: 1, ease: "power3.out" },
     });
@@ -19,18 +22,24 @@ const Hero = () => {
     tl.fromTo(
       ".hello",
       { y: -15, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 2.5 }
+      { y: 0, opacity: 1, duration: 0.5, delay: 2.5 }
     );
 
+    tl.from(heroSplit.words, {
+      yPercent:100,
+      opacity:0,
+      stagger:0.04
+    })
+
     tl.from(
-      ".word",
+      "hero",
       {
         x: -5,
         opacity: 0,
-        duration: 0.8,
+
         stagger: 0.15,
       },
-      "-=0.5"
+      "<"
     );
 
     tl.fromTo(
@@ -67,18 +76,14 @@ const Hero = () => {
 
     <div
       id="home"
-      className=" lg:h-[100vh] w-auto p-5 md:p-10 flex justify-evenly items-center flex-col"
+      className=" lg:h-[100vh] w-auto p-5 md:pt-10 md:px-10 flex justify-evenly items-center flex-col"
     >
       <div className="text-center flex flex-col justify-center items-center mt-20 lg:mt-10">
         <p className="hello py-2 2xl:px-4  border-2 border-[#171717] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
           Hello!
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit text-black mt-2.5 md:mt-0">
-          <span className="word">I'm</span>
-          <span className="word text-[#FD853A]">Jenny,</span>
-          <br className="basis-full" />
-          <span className="word">Product</span>
-          <span className="word">Designer</span>
+          <h3 className="word">I'm <span className="word text-[#FD853A]">Jenny,</span><br />Product Designer</h3>
         </h1>
       </div>
 
@@ -114,7 +119,7 @@ const Hero = () => {
         />
         <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#FEB273] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
-        <div className="w-[270px] 2xl:w-[360px] rounded-full border-white border-1 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50 text-white translate-y-15">
+        <div className="w-[300px] 2xl:w-[360px] rounded-full border-white border-1 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50 text-white translate-y-5">
           {buttons.map((btn, i) => (
             <button
               key={i}
