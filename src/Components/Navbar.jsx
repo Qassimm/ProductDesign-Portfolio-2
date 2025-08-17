@@ -137,7 +137,7 @@ const Navbar = () => {
         ))}
 
         {/* Logo */}
-        <a className="logo flex justify-center items-center text-2xl 2xl:text-4xl font-bold md:mx-8">
+        <a href="#home" className="logo flex justify-center items-center text-2xl 2xl:text-4xl font-bold md:mx-8">
           <img
             src={Logo}
             alt="Logo"
