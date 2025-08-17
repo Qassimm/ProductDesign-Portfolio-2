@@ -166,7 +166,7 @@ const Navbar = () => {
         <div
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col justify-between w-[28px] h-[22px] cursor-pointer z-50 md:hidden"
+          className="flex flex-col justify-between w-[28px] h-[22px] mr-5 cursor-pointer z-50 md:hidden"
         >
           <span
             className={`h-[3px] w-full bg-white rounded transition-transform duration-300 ${
@@ -194,12 +194,20 @@ const Navbar = () => {
               : "translate-x-5 opacity-0 pointer-events-none"
           }`}
         >
+           <a className="logo flex items-center text-2xl 2xl:text-4xl font-bold md:hidden">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="h-auto w-[75px] 2xl:w-[120px]"
+          />
+          <p>JCREA</p>
+        </a>
           {[...navLinks1, ...navLinks2].map((link, i) => (
             <a
               key={i}
               href={link.href}
               onClick={() => handleClick(link.href)}
-              className={`text-lg pb-1 border-b cursor-pointer rounded-md px-2 py-1 transition-colors duration-200 ${
+              className={`text-lg pb-1 border-1 border-gray-800 cursor-pointer rounded px-2 py-1 transition-colors duration-200 ${
                 activeLink === link.href
                   ? "bg-[#FD853A] text-black"
                   : "hover:text-gray-300"
@@ -208,6 +216,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a href="#about" className="text-xl bg-[#FD853A] text-white px-4 text-start py-1 rounded-full mt-8 cursor-pointer">Hire Me</a>
         </div>
       </div>
     </div>
