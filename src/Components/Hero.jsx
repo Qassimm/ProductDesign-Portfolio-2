@@ -9,7 +9,7 @@ import { SplitText } from "gsap/all";
 const Hero = () => {
   const buttons = [
     { label: "Portfolio", iconPosition: "right", href:'#resume' },
-    { label: "Hire Me", iconPosition: "left", href:'#about' },
+    { label: "Hire Me", iconPosition: "left", href:'#contact' },
   ];
 
   useGSAP(() => {

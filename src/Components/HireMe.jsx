@@ -56,7 +56,7 @@ const HireMe = () => {
       id="about"
       className="lg:h-[100vh] w-auto flex justify-center items-center rounded-[50px] bg-[#F2F4F7] lg:my-12 "
     >
-      <div className="flex  items-center gap-5 ">
+      <div className="flex  items-center gap-10 ">
         <div className="relative w-fit group hidden lg:block">
           
 
@@ -67,6 +67,12 @@ const HireMe = () => {
             alt="sidPic"
             className="relative z-10 w-[30vw] object-cover"
           />
+           {/* Animated Border Circles */}
+          <div className="flex justify-between items-center relative bottom-120 right-5">
+            <div className="absolute inset-0 z-0 hidden lg:block w-[300px] 2xl:w-[475px] h-[300px] 2xl:h-[475px] border-[#03c1cc] border-2 left-16 top-12 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-0" />
+          <div className="absolute inset-0 z-0 hidden lg:block w-[375px] 2xl:w-[500px] h-[375px] 2xl:h-[500px] border-[#03c1cc] border-2 left-10 top-6 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100" />
+          <div className="absolute inset-0 z-0 hidden lg:block w-[425px] 2xl:w-[550px] h-[425px] 2xl:h-[550px] border-[#03c1cc] border-2  left-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200" />
+          </div>
         </div>
 
         {/* Text Section */}

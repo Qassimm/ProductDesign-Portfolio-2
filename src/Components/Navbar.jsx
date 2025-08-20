@@ -26,18 +26,23 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = () => {
+    if (window.innerWidth >= 768) { 
       if (window.scrollY > lastScrollY) {
         setShowNavbar(false);
       } else {
         setShowNavbar(true);
       }
       setLastScrollY(window.scrollY);
-    };
+    } else {
+      
+      setShowNavbar(true);
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -188,7 +193,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`md:hidden bg-[#171717] text-white absolute top-0 w-75 h-[100vh] right-0  px-10 py-6 flex flex-col gap-8 transition-all duration-300 ease-in-out rounded-l-xl ${
+          className={`md:hidden bg-[#171717] text-white absolute w-75 h-[100vh] right-0 top-19 px-10 py-6 flex flex-col gap-8 transition-all duration-300 ease-in-out rounded-l-xl ${
             isOpen
               ? "translate-x-0 opacity-100"
               : "translate-x-5 opacity-0 pointer-events-none"
@@ -216,7 +221,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a href="#about" className="text-xl bg-[#03c1cc] text-white px-4 text-start py-1 rounded-full mt-8 cursor-pointer">Hire Me</a>
+          <a href="#about" className="text-xl bg-[#03c1cc] text-white px-4 text-start py-2 rounded-full mt-0 cursor-pointer">Hire Me</a>
         </div>
       </div>
     </div>

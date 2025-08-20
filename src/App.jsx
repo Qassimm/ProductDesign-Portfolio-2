@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Toaster } from 'react-hot-toast';
+import Form from './Components/Form';
 
 
 const App = () => {
@@ -92,6 +93,7 @@ const App = () => {
       <Contact/>
       <Toaster position="top-center" reverseOrder={false} />
       <Blog/>
+      <Form />
       <Footer/>
 
       <div

@@ -14,7 +14,7 @@ const Blog = () => {
         ...toVars,
         scrollTrigger: {
           trigger,
-          start: "top 70%",
+          start: "top 90%",
           toggleActions: "play none none none",
         },
       });
