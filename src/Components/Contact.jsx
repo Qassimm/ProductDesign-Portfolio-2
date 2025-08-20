@@ -62,9 +62,9 @@ const Contact = () => {
         toast.error("Error sending email. Try again.", { duration: 2000 });
       }
     } catch (error) {
-      toast.error("⚠️ Something went wrong.", { duration: 2000 });
+      toast.error("Something went wrong.", { duration: 2000 });
     } finally {
-      setLoading(false); // 🔄 stop loading
+      setLoading(false); 
     }
   };
 
