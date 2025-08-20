@@ -8,8 +8,8 @@ import { SplitText } from "gsap/all";
 
 const Hero = () => {
   const buttons = [
-    { label: "Portfolio", iconPosition: "right" },
-    { label: "Hire Me", iconPosition: "left" },
+    { label: "Portfolio", iconPosition: "right", href:'#resume' },
+    { label: "Hire Me", iconPosition: "left", href:'#about' },
   ];
 
   useGSAP(() => {
@@ -76,15 +76,15 @@ const Hero = () => {
 
     <div
       id="home"
-      className=" lg:h-[100vh] text-[#131313] w-auto p-5 md:pt-10 md:px-10 flex justify-evenly items-center flex-col"
+      className=" lg:h-[100vh] text-[#131313] w-auto p-5 md:pt-10 md:p-0 flex justify-evenly items-center flex-col"
     >
       <div className="text-center flex flex-col justify-center items-center mt-20 lg:mt-10">
         <p className="hello py-2 2xl:px-4  border-2  border-[#131313] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
           Hello!
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit  mt-2.5 md:mt-0">
+        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit  mt-2.5 md:mt-0">
           <h3 className="word">I'm <span className="word text-[#03c1cc]">Jack,</span><br />Product Designer</h3>
-        </h1>
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row gap-15 md:gap-0  w-full justify-between items-center  translate-y-10">
@@ -121,8 +121,9 @@ const Hero = () => {
 
         <div className="w-[300px] 2xl:w-[360px] rounded-full border-[#131313] border-2 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50  translate-y-5">
           {buttons.map((btn, i) => (
-            <button
+            <a
               key={i}
+              href={btn.href}
               className="group relative overflow-hidden hover:bg-[#03c1cc] rounded-full px-5 2xl:px-7 py-2 2xl:py-3 hover:text-xl flex justify-center items-center duration-300 cursor-pointer"
             >
               {btn.iconPosition === "left" && (
@@ -144,7 +145,7 @@ const Hero = () => {
                   <LuArrowUpRight className="text-2xl" />
                 </span>
               )}
-            </button>
+            </a>
           ))}
         </div>
       </div>

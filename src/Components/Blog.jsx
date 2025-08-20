@@ -130,11 +130,11 @@ const Blog = () => {
 
             <div className="flex justify-between items-center 2xl:text-xl gap-4">
               <p className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#03c1cc]" />
+                <span className="w-2 h-2 rounded-full bg-[#03c1cc] inline-block" />
                 {author}
               </p>
               <p className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#03c1cc]" />
+                <span className="w-2 h-2 rounded-full bg-[#03c1cc] inline-block" />
                 {date}
               </p>
             </div>

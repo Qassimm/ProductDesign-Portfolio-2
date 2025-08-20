@@ -9,8 +9,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "muhammadqqaasim@gmail.com", // 👈 yahan apna sahi Gmail
-    pass: "hkuy yyni dkce izpz",       // 👈 yahan apna App Password
+    user: "muhammadqqaasim@gmail.com", 
+    pass: "hkuyyynidkceizpz",       
   },
 });
 
@@ -18,7 +18,7 @@ app.post("/send-email", async (req, res) => {
   const { email } = req.body;
 
   try {
-    // 👇 server side email
+    //  server side email
     await transporter.sendMail({
       from: "muhammadqqaasim@gmail.com",
       to: "muhammadqqaasim@gmail.com",  
@@ -26,7 +26,7 @@ app.post("/send-email", async (req, res) => {
       text: `New subscriber: ${email}`,
     });
 
-    // 👇 client side email
+    //  client side email
     await transporter.sendMail({
       from: "muhammadqqaasim@gmail.com", 
       to: email,                         
