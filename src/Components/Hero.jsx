@@ -76,9 +76,9 @@ const Hero = () => {
 
     <div
       id="home"
-      className=" lg:h-[100vh] text-[#131313] w-auto p-5 md:pt-10 md:p-0 flex justify-evenly items-center flex-col"
+      className=" lg:h-[100vh] text-[#131313] w-auto p-5 md:pt-10 md:px-10 md:py-0 flex justify-evenly items-center flex-col"
     >
-      <div className="text-center flex flex-col justify-center items-center mt-20 lg:mt-10">
+      <div className="text-center flex flex-col justify-center items-center translate-y-15 ">
         <p className="hello py-2 2xl:px-4  border-2  border-[#131313] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
           Hello!
         </p>
@@ -111,15 +111,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-center grid place-items-center relative mt-85 lg:mt-10">
+      <div className="hero-center grid place-items-center relative mt-85 lg:mt-30">
         <img
           src={HeroPic}
           alt="HeroPic"
           className=" h-[420px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
         />
-        <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#58f7ff] rounded-t-full absolute -top-51 sm:-top-37.5" />
+        <div className="w-80 sm:w-140 h-90 sm:h-100 2xl:h-80 bg-[#58f7ff] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
-        <div className="w-[300px] 2xl:w-[360px] rounded-full border-[#131313] border-2 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50  translate-y-5">
+        <div className="w-[300px] 2xl:w-[360px] rounded-full border-[#131313] border-2 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50  ">
           {buttons.map((btn, i) => (
             <a
               key={i}
