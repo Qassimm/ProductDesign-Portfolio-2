@@ -2,7 +2,7 @@
 
 export  const Testimonials = [
   {
-    name: "Jayesh Patil Ayesha Khan",
+    name: "Nolan Daiv",
     position: "CEO, Lirante",
     rating: 5,
     feedback:
