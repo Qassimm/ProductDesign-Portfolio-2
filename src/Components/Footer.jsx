@@ -26,7 +26,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="h-auto w-full p-5 lg:pt-10 px-12 bg-[#272727] rounded-tl-[54px] rounded-tr-[54px] flex flex-col justify-between items-center gap-10 text-white mt-22">
+    <div className="h-auto w-full p-5 lg:pt-10 px-12 bg-[#272727] sm:rounded-tl-[54px] sm:rounded-tr-[54px] flex flex-col justify-between items-center gap-10 text-white mt-22">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center w-full ">
         <h1 className="text-4xl md:text-6xl 2xl:text-7xl text-center md:text-start font-semibold md:w-100 lg:w-auto">

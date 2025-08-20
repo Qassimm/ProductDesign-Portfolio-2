@@ -87,16 +87,16 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-15 md:gap-0  w-full justify-between items-center  translate-y-10">
+      <div className="flex flex-col md:flex-row gap-15 md:gap-0  w-full justify-between items-center  translate-y-25">
         <div className="left-content w-[320px] font-semibold flex md:flex-none flex-col   items-center md:items-start text-center md:text-start">
-          <FaQuoteLeft className="text-xl 2xl:text-3xl mb-5" />
+          <FaQuoteLeft className="text-xl 2xl:text-3xl mb-1" />
           <p className="2xl:text-2xl">
             Jenny's Exceptional product design ensure our website's
             success.Highly Recommended
           </p>
         </div>
 
-        <div className="right-content flex flex-col justify-end items-center sm:items-end text-end ">
+        <div className="right-content flex flex-col justify-end items-center  sm:items-end  text-end ">
           <div className="flex">
             {Array(5)
               .fill(0)
@@ -107,7 +107,7 @@ const Hero = () => {
               ))}
           </div>
           <h1 className="text-4xl 2xl:text-6xl  font-semibold">10 Years</h1>
-          <p className="2xl:text-2xl">Experience</p>
+          <p className="2xl:text-2xl ">Experience</p>
         </div>
       </div>
 
