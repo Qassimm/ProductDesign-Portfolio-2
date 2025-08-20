@@ -18,11 +18,11 @@ const Footer = () => {
     "Portfolio-jcrea.com",
   ];
   const socialIcons = [
-    <FaFacebook className="hover:text-[#FD853A]" />,
-    <FaYoutube className="hover:text-[#FD853A]" />,
-    <FaWhatsapp className="hover:text-[#FD853A]" />,
-    <FaInstagram className="hover:text-[#FD853A]" />,
-    <FaTwitter className="hover:text-[#FD853A]" />,
+    <FaFacebook className="hover:text-[#03c1cc]" />,
+    <FaYoutube className="hover:text-[#03c1cc]" />,
+    <FaWhatsapp className="hover:text-[#03c1cc]" />,
+    <FaInstagram className="hover:text-[#03c1cc]" />,
+    <FaTwitter className="hover:text-[#03c1cc]" />,
   ];
 
   return (
@@ -32,9 +32,9 @@ const Footer = () => {
         <h1 className="text-4xl md:text-6xl 2xl:text-7xl text-center md:text-start font-semibold md:w-100 lg:w-auto">
           Lets Connect there
         </h1>
-        <button className="flex items-center text-xl 2xl:text-2xl bg-[#FD853A] px-2 lg:px-3 py-2 rounded-full gap-1 hover:bg-[#fda53a]">
+        <a href="#contact" className="flex items-center text-xl 2xl:text-2xl bg-[#03c1cc] px-2 lg:px-3 py-2 rounded-full gap-1 hover:bg-[#22a9b0]">
           Hire me <LuArrowUpRight className="text-2xl" />
-        </button>
+        </a>
       </div>
 
       {/* Middle Section */}
@@ -70,7 +70,7 @@ const Footer = () => {
         <div className="flex gap-7 sm:gap-5 2xl:gap-15 flex-col sm:flex-row">
           {/* Navigation */}
           <div className="flex flex-col justify-between items-center md:items-start text-center md:text-start">
-            <h1 className="text-[#FD853A] text-lg 2xl:text-2xl font-semibold">
+            <h1 className="text-[#03c1cc] text-lg 2xl:text-2xl font-semibold">
               Navigation
             </h1>
             <div className="flex flex-col gap-3 mt-3">
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-start">
-            <h1 className="text-[#FD853A] text-lg 2xl:text-2xl font-semibold">
+            <h1 className="text-[#03c1cc] text-lg 2xl:text-2xl font-semibold">
               Contact
             </h1>
             <div className="flex flex-col gap-3 mt-3">
@@ -102,7 +102,7 @@ const Footer = () => {
 
         {/* Email Form */}
         <div className="text-lg 2xl:text-2xl text-center md:text-start">
-          <h1 className="text-[#FD853A] font-semibold">
+          <h1 className="text-[#03c1cc] font-semibold">
             Get the latest information
           </h1>
           <form
@@ -115,7 +115,7 @@ const Footer = () => {
               className="outline-0 text-black mx-2 text-base 2xl:text-lg"
             />
             <button>
-              <FaPaperPlane className="bg-[#FD853A] hover:bg-[#fda53a] text-5xl 2xl:text-[64px] rounded-tr-2xl rounded-br-2xl p-3" />
+              <FaPaperPlane className="bg-[#03c1cc] hover:bg-[#22a9b0] text-5xl 2xl:text-[64px] rounded-tr-2xl rounded-br-2xl p-3" />
             </button>
           </form>
         </div>

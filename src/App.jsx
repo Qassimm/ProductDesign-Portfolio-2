@@ -12,6 +12,7 @@ import Blog from './Components/Blog';
 import Footer from './Components/Footer';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { Toaster } from 'react-hot-toast';
 
 
 const App = () => {
@@ -89,16 +90,17 @@ const App = () => {
       <Portfolio/>
       <Testimonial/>
       <Contact/>
+      <Toaster position="top-center" reverseOrder={false} />
       <Blog/>
       <Footer/>
 
       <div
         ref={dotRef}
-        className="w-3 h-3 rounded-full bg-orange-600 fixed top-0 left-0 pointer-events-none z-[9999]"
+        className="w-3 h-3 rounded-full bg-[#03c1cc] fixed top-0 left-0 pointer-events-none z-[9999]"
       />
       <div
         ref={outlineRef}
-        className="w-10 h-10 rounded-full border-2 border-orange-600 fixed top-0 left-0 pointer-events-none z-[9999]"
+        className="w-10 h-10 rounded-full border-2 border-cyan-600 fixed top-0 left-0 pointer-events-none z-[9999]"
       />
     </div>
   )

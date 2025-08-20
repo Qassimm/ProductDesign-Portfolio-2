@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Background from "../assets/images/Background.jpg";
+import Background from "../assets/images/Background.png";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 import { Testimonials } from "./Data/Testimonial";
 import testimonials from "../assets/images/testimonial.jpg";
@@ -89,7 +89,7 @@ const Testimonial = () => {
           <div className="flex flex-col text-center justify-center items-center gap-4">
             <h1 className="testimonial-heading md:w-120 2xl:w-220 lg:leading-15 text-4xl lg:text-5xl 2xl:text-6xl font-semibold text-center">
               Testimonials That Speak to{" "}
-              <span className="text-[#FD853A]">My Results</span>
+              <span className="text-[#03c1cc]">My Results</span>
             </h1>
 
             <p className="test-text lg:w-200 lg:text-[20px]">
@@ -133,7 +133,7 @@ const Testimonial = () => {
                         .fill(0)
                         .map((_, i) => (
                           <span key={i}>
-                            <FaStar className="text-[#FD853A] text-3xl 2xl:text-6xl" />
+                            <FaStar className="text-[#03c1cc] text-3xl 2xl:text-6xl" />
                           </span>
                         ))}
                       <p>{item.rating.toFixed(1)}</p>

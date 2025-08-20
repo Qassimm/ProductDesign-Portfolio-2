@@ -119,7 +119,7 @@ const Navbar = () => {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="bg-[#171717] w-auto 2xl:h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white">
+      <div className="bg-[#131313] w-auto 2xl:h-[10vh] px-6 sm:px-4 md:rounded-full flex justify-between items-center text-white">
         {/* Left Links */}
         {navLinks1.map((link, i) => (
           <a
@@ -128,7 +128,7 @@ const Navbar = () => {
             onClick={() => handleClick(link.href)}
             className={`left-nav hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] rounded-full duration-300 lg:text-lg 2xl:text-3xl ${
               activeLink === link.href
-                ? "bg-[#FD853A] text-white"
+                ? "bg-[#03c1cc] text-black"
                 : "hover:bg-[#4b4b4b]"
             }`}
           >
@@ -154,7 +154,7 @@ const Navbar = () => {
             onClick={() => handleClick(link.href)}
             className={`right-nav hidden md:flex cursor-pointer py-[10px] lg:py-[10px] 2xl:py-[15px] px-[16px] lg:px-[40px] 2xl:px-[45px] rounded-full duration-300 lg:text-lg 2xl:text-3xl ${
               activeLink === link.href
-                ? "bg-[#FD853A] text-white"
+                ? "bg-[#03c1cc] text-black"
                 : "hover:bg-[#4b4b4b]"
             }`}
           >
@@ -188,7 +188,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`md:hidden bg-[#171717] text-white absolute top-19 w-75 h-[100vh] right-0  px-10 py-6 flex flex-col gap-8 transition-all duration-300 ease-in-out rounded-l-xl ${
+          className={`md:hidden bg-[#171717] text-white absolute top-0 w-75 h-[100vh] right-0  px-10 py-6 flex flex-col gap-8 transition-all duration-300 ease-in-out rounded-l-xl ${
             isOpen
               ? "translate-x-0 opacity-100"
               : "translate-x-5 opacity-0 pointer-events-none"
@@ -209,14 +209,14 @@ const Navbar = () => {
               onClick={() => handleClick(link.href)}
               className={`text-lg pb-1 border-1 border-gray-800 cursor-pointer rounded px-2 py-1 transition-colors duration-200 ${
                 activeLink === link.href
-                  ? "bg-[#FD853A] text-black"
+                  ? "bg-[#03c1cc] text-black"
                   : "hover:text-gray-300"
               }`}
             >
               {link.label}
             </a>
           ))}
-          <a href="#about" className="text-xl bg-[#FD853A] text-white px-4 text-start py-1 rounded-full mt-8 cursor-pointer">Hire Me</a>
+          <a href="#about" className="text-xl bg-[#03c1cc] text-white px-4 text-start py-1 rounded-full mt-8 cursor-pointer">Hire Me</a>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Background from "../assets/images/Background.jpg";
+import Background from "../assets/images/Background.png";
 import Leaf from "../assets/images/Leaf.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
@@ -128,7 +128,7 @@ const MyServices = () => {
       <div className="relative z-20 p-15 h-full flex flex-col justify-center">
         <div className="z-90 flex justify-center items-center md:justify-between md:items-center text-center md:text-start flex-col md:flex-row h-full text-white">
           <h1 className="heading text-4xl md:text-6xl 2xl:text-8xl font-semibold">
-            My <span className="text-[#FD853A]">Services</span>
+            My <span className="text-[#03c1cc]">Services</span>
           </h1>
           <p className="para md:w-[465px] 2xl:text-xl mt-4 md:mt-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
@@ -142,17 +142,17 @@ const MyServices = () => {
             <clipPath id="roundedCard" clipPathUnits="objectBoundingBox">
               <path d="M1,0.0656 V0.6533 C1,0.6968,0.9573,0.7402,0.9049,0.7402 H0.842 C0.7601,0.7402,0.6893,0.7951,0.6893,0.8769 V0.9453 C0.6893,0.9842,0.6578,1,0.6019,1 H0.0791 C0.0395,1,0,0.9604,0,0.9209 V0.0656 C0,0.0256,0.0395,0,0.0791,0 H0.9209 C0.9604,0,1,0.0395,1,0.0656 Z" />
             </clipPath>
-          </defs>
+          </defs> 
         </svg>
 
-        <div className="cards flex flex-col lg:flex-row gap-8 lg:gap-0 justify-center lg:justify-between items-center my-10 z-40">
+        <div className="cards flex  flex-col lg:flex-row gap-8  justify-center lg:justify-between items-center my-10 z-40">
           {cardsData.map((card, index) => (
             <div key={index} className="cards relative group cursor-pointer">
               <div
-                className="w-[300px] sm:w-[355px] 2xl:w-[405px] h-[400px] sm:h-[455px] 2xl:h-[505px] border-2 border-white rounded-4xl bg-white/10 flex flex-col justify-between relative overflow-hidden group-hover:bg-[#FD853A] duration-300"
+                className="w-[300px] sm:w-[355px] 2xl:w-[405px] h-[400px] sm:h-[455px] 2xl:h-[505px] border-2 border-white rounded-4xl bg-white/10 flex flex-col justify-between relative overflow-hidden group-hover:bg-[#03c1cc] duration-300"
                 style={{ clipPath: "url(#roundedCard)" }}
               >
-                <h1 className="text-3xl p-8 border-b-2">{card.title}</h1>
+                <h1 className="text-3xl group-hover:text-[#131313] p-8 border-b-2 duration-300">{card.title}</h1>
                 <img
                   src={card.image}
                   alt={card.title}
@@ -161,7 +161,7 @@ const MyServices = () => {
                 <div className="w-[90%] h-36 sm:h-48 bg-[#9E9D9D] absolute bottom-23 left-1/18 rounded-[40px] z-9 group-hover:h-53 transition-all" />
                 <div className="w-[80%] h-34 sm:h-48 bg-[#757575]/50 blur-[1px] absolute bottom-28 left-1/10 rounded-[40px] group-hover:h-53 transition-all" />
               </div>
-              <LuArrowUpRight className="p-2 text-7xl sm:text-8xl lg:text-8xl 2xl:text-[110px] duration-300 group-hover:bg-[#FD853A] text-white bg-[#1D2939] rounded-full absolute right-0 bottom-2 hover:bg-[#FD853A]" />
+              <LuArrowUpRight className="p-2 text-7xl sm:text-8xl lg:text-8xl 2xl:text-[110px] duration-300 group-hover:bg-[#03c1cc] group-hover:text-[#131313] text-white bg-[#1D2939] rounded-full absolute right-0 bottom-2 " />
             </div>
           ))}
         </div>

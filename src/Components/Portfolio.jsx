@@ -83,9 +83,9 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row text-center md:text-start justify-between items-center gap-5 md:gap-0">
           <h1 className="portfolio-heading text-4xl md:text-6xl 2xl:text-7xl font-semibold md:w-120 lg:w-150">
             Let’s have a look at my{" "}
-            <span className="text-[#FD853A]">Portfolio</span>
+            <span className="text-[#03c1cc]">Portfolio</span>
           </h1>
-          <button className="button px-5 py-2 text-lg 2xl:text-2xl text-white rounded-full bg-[#FD853A] hover:bg-[#fda53a] cursor-pointer">
+          <button className="button px-5 py-2 text-lg 2xl:text-2xl text-white rounded-full bg-[#03c1cc] hover:bg-[#22a9b0] cursor-pointer">
             See All
           </button>
         </div>
@@ -100,11 +100,11 @@ const Portfolio = () => {
                 backgroundImage: `radial-gradient(ellipse at bottom left, rgba(0, 0, 0, 0.5), transparent 70%), url(${Project})`,
               }}
             >
-              <div className="absolute top-4 right-4 group-hover:text-[#FD853A] duration-300 text-5xl 2xl:text-6xl">
+              <div className="absolute top-4 right-4 group-hover:text-[#03c1cc] duration-300 text-5xl 2xl:text-6xl">
                 <FaArrowAltCircleRight />
               </div>
 
-              <div className="absolute bottom-4 left-4 max-w-[90%] bg-transparent group-hover:bg-black/60 group-hover:backdrop-blur-[2px] text-white rounded-xl p-4 transition-all ">
+              <div className="absolute bottom-4 left-4 max-w-[90%] bg-transparent group-hover:bg-[#0a1e39]/60 group-hover:backdrop-blur-[2px] text-white rounded-xl p-4 transition-all ">
                 <p className="text-5xl 2xl:text-6xl font-semibold mb-2 duration-300">
                   {project.title}
                 </p>
@@ -118,7 +118,7 @@ const Portfolio = () => {
 
         {/* Dots indicator */}
         <div className="flex justify-center gap-1 items-center">
-          <div className="w-10 2xl:w-20 h-3 2xl:h-4 bg-[#FD853A] rounded-2xl" />
+          <div className="w-10 2xl:w-20 h-3 2xl:h-4 bg-[#03c1cc] rounded-2xl" />
           <div className="w-3 2xl:w-4 h-3 2xl:h-4 bg-[#E4E7EC] rounded-2xl" />
           <div className="w-3 2xl:w-4 h-3 bg-[#E4E7EC] rounded-2xl" />
           <div className="w-3 2xl:w-4 h-3 bg-[#E4E7EC] rounded-2xl" />
@@ -128,7 +128,7 @@ const Portfolio = () => {
         <div className="cta-text flex flex-col justify-center items-center gap-5 ">
           <div className="text-center flex-col md:flex-row items-center md:items-start text-4xl md:text-5xl 2xl:text-6xl md:w-[560px] lg:w-auto gap-5 md:gap-0 lg:gap-3 flex">
             <h1>Lirante - Food Delivery Solution</h1>
-            <LuArrowUpRight className="bg-[#FD853A] hover:bg-[#fda53a] cursor-pointer text-white rounded-full p-2" />
+            <LuArrowUpRight className="bg-[#03c1cc] hover:bg-[#22a9b0] cursor-pointer text-white rounded-full p-2" />
           </div>
           <p className="text-center md:w-150 2xl:w-200 2xl:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue

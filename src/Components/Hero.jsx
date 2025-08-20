@@ -76,14 +76,14 @@ const Hero = () => {
 
     <div
       id="home"
-      className=" lg:h-[100vh] w-auto p-5 md:pt-10 md:px-10 flex justify-evenly items-center flex-col"
+      className=" lg:h-[100vh] text-[#131313] w-auto p-5 md:pt-10 md:px-10 flex justify-evenly items-center flex-col"
     >
       <div className="text-center flex flex-col justify-center items-center mt-20 lg:mt-10">
-        <p className="hello py-2 2xl:px-4  border-2 border-[#171717] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
+        <p className="hello py-2 2xl:px-4  border-2  border-[#131313] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
           Hello!
         </p>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit text-black mt-2.5 md:mt-0">
-          <h3 className="word">I'm <span className="word text-[#FD853A]">Jenny,</span><br />Product Designer</h3>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit  mt-2.5 md:mt-0">
+          <h3 className="word">I'm <span className="word text-[#03c1cc]">Jack,</span><br />Product Designer</h3>
         </h1>
       </div>
 
@@ -102,11 +102,11 @@ const Hero = () => {
               .fill(0)
               .map((_, index) => (
                 <span key={index}>
-                  <FaStar className="text-[#FD853A] text-3xl 2xl:text-6xl" />
+                  <FaStar className="text-[#03c1cc] text-3xl 2xl:text-6xl" />
                 </span>
               ))}
           </div>
-          <h1 className="text-4xl 2xl:text-6xl font-semibold">10 Years</h1>
+          <h1 className="text-4xl 2xl:text-6xl  font-semibold">10 Years</h1>
           <p className="2xl:text-2xl">Experience</p>
         </div>
       </div>
@@ -117,13 +117,13 @@ const Hero = () => {
           alt="HeroPic"
           className=" h-[420px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
         />
-        <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#FEB273] rounded-t-full absolute -top-51 sm:-top-37.5" />
+        <div className="w-80 sm:w-140 h-90 sm:h-70 2xl:h-80 bg-[#58f7ff] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
-        <div className="w-[300px] 2xl:w-[360px] rounded-full border-white border-1 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50 text-white translate-y-5">
+        <div className="w-[300px] 2xl:w-[360px] rounded-full border-[#131313] border-2 p-2 2xl:p-4 backdrop-blur-md bg-white/30 flex justify-between items-center text-lg z-50  translate-y-5">
           {buttons.map((btn, i) => (
             <button
               key={i}
-              className="group relative overflow-hidden hover:bg-[#FD853A] rounded-full px-5 2xl:px-7 py-2 2xl:py-3 hover:text-xl flex justify-center items-center duration-300 cursor-pointer"
+              className="group relative overflow-hidden hover:bg-[#03c1cc] rounded-full px-5 2xl:px-7 py-2 2xl:py-3 hover:text-xl flex justify-center items-center duration-300 cursor-pointer"
             >
               {btn.iconPosition === "left" && (
                 <span className="absolute start-[-30px] transition-all duration-300 group-hover:start-4">

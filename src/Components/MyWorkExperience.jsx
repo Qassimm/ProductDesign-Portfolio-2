@@ -81,14 +81,14 @@ const MyWorkExperience = () => {
   return (
     <div
       ref={containerRef}
-      className="lg:min-h-[100vh] w-full p-8 lg:p-10 flex flex-col items-center text-[#344054] gap-10 sm:gap-20 relative"
+      className="lg:min-h-[100vh] w-full p-8 lg:p-10 flex flex-col items-center text-[#131313] gap-10 sm:gap-20 relative"
     >
       <div>
         <h1
           id="heading-text"
           className="text-4xl sm:text-6xl 2xl:text-8xl font-semibold text-center"
         >
-          My <span className="text-[#FD853A]">Work Experience</span>
+          My <span className="text-[#03c1cc]">Work Experience</span>
         </h1>
       </div>
 
