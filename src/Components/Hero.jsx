@@ -115,7 +115,7 @@ const Hero = () => {
         <img
           src={HeroPic}
           alt="HeroPic"
-          className=" h-[420px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
+          className=" h-[430px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
         />
         <div className="w-80 sm:w-140 h-90 sm:h-100 2xl:h-80 bg-[#58f7ff] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
