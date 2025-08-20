@@ -95,7 +95,7 @@ const Form = () => {
        
 
   return (
-    <div className="min-h-screen w-auto bg-cover rounded-[50px] relative overflow-hidden flex justify-center items-center  bg-[#EBECF0] py-12 lg:py-0"
+    <div className="min-h-screen w-auto bg-cover sm:rounded-[50px] relative overflow-hidden flex justify-center items-center  bg-[#EBECF0] py-12 lg:py-0"
           style={{ backgroundImage: `url(${Background})` }}>
       <form ref={formRef} className="form p-6 w-[90vw]  md:w-[75vw]  bg-[#EBECF0] rounded-2xl shadow-[inset_2px_2px_5px_#BABECC,inset_-5px_-5px_10px_#FFF] z-10">
 

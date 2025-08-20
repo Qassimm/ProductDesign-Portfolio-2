@@ -119,7 +119,7 @@ const MyServices = () => {
   return (
     <div
       id="services"
-      className="lg:h-[100vh] w-auto bg-cover rounded-[50px] relative text-white overflow-hidden mt-12 md:mt-6 lg:mt-0 mb-12 z-10"
+      className="lg:h-[100vh] w-auto bg-cover sm:rounded-[50px] relative text-white overflow-hidden mt-12 md:mt-6 lg:mt-0 mb-12 z-10"
       style={{ backgroundImage: `url(${Background})` }}
     >
       <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] rounded-[50px] z-5 " />

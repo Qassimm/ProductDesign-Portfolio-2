@@ -76,7 +76,7 @@ const Testimonial = () => {
 
   return (
     <div
-      className="lg:h-auto 2xl:h-[100vh] lg:py-10 w-auto bg-cover rounded-[50px] relative text-white overflow-hidden my-12"
+      className="lg:h-auto 2xl:h-[100vh] lg:py-10 w-auto bg-cover sm:rounded-[50px] relative text-white overflow-hidden my-12"
       style={{ backgroundImage: `url(${Background})` }}
     >
       {/* Black overlay */}

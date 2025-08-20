@@ -54,7 +54,7 @@ const HireMe = () => {
   return (
     <div
       id="about"
-      className="lg:h-[100vh] w-auto flex justify-center items-center rounded-[50px] bg-[#F2F4F7] lg:my-12 "
+      className="lg:h-[100vh] w-auto flex justify-center items-center sm:rounded-[50px] bg-[#F2F4F7] lg:my-12 "
     >
       <div className="flex  items-center gap-10 ">
         <div className="relative w-fit group hidden lg:block">
