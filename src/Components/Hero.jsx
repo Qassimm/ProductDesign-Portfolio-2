@@ -82,7 +82,7 @@ const Hero = () => {
         <p className="hello py-2 2xl:px-4  border-2  border-[#131313] rounded-full w-[103px] 2xl:text-2xl font-semibold ">
           Hello!
         </p>
-        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[150px] font-semibold font-outfit  mt-2.5 md:mt-0">
+        <div className="text-4xl sm:text-5xl md:text-7xl lg:text-[85px] 2xl:text-[150px] font-semibold font-outfit  mt-2.5 md:mt-0">
           <h3 className="word">I'm <span className="word text-[#03c1cc]">Jack,</span><br />Product Designer</h3>
         </div>
       </div>
@@ -115,7 +115,7 @@ const Hero = () => {
         <img
           src={HeroPic}
           alt="HeroPic"
-          className=" h-[430px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-72.5 2xl:-top-100 z-10"
+          className=" h-[430px] 2xl:h-[66vh] absolute object-cover -top-66 sm:-top-64.5 2xl:-top-100 z-10"
         />
         <div className="w-80 sm:w-140 h-90 sm:h-100 2xl:h-80 bg-[#58f7ff] rounded-t-full absolute -top-51 sm:-top-37.5" />
 
